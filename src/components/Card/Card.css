@@ -14,3 +14,13 @@
 .card-detail {
   margin-top: 15px;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
