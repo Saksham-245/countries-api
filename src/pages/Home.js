@@ -4,6 +4,7 @@ import axios from "axios";
 import Card from "../components/Card/Cards";
 import Spinner from "../components/Spinner/Spinner";
 import { Link } from "react-router-dom";
+import Search from "../components/Search/Search";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ const Home = () => {
   return (
     <div>
       <TopBar />
+      <Search />
       <div
         style={{
           display: "flex",
@@ -26,6 +28,7 @@ const Home = () => {
           flexWrap: "wrap",
           marginLeft: "5%",
           marginRight: "5%",
+          paddingTop: "10%",
         }}
       >
         {loading ? (

@@ -1,0 +1,10 @@
+.Search {
+  width: 25%;
+  margin-top: 5%;
+  margin-left: 60px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}

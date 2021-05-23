@@ -36,23 +36,42 @@ const CountryDetail = ({ match }) => {
             </div>
             <div style={{ marginTop: -45 }}>
               <h2 className={classes.heading}>{data.name}</h2>
-              <div className={classes.dataOne}>
-                <p>
-                  <strong>Native Name: </strong> {data.nativeName}
-                </p>
-                <p>
-                  <strong>Population: </strong>{" "}
-                  {data.population.toLocaleString("en-US")}
-                </p>
-                <p>
-                  <strong>Region: </strong> {data.region}
-                </p>
-                <p>
-                  <strong>Sub Region: </strong> {data.subregion}
-                </p>
-                <p>
-                  <strong>Capital: </strong> {data.capital}
-                </p>
+              <div style={{ display: "flex" }}>
+                <div className={classes.dataOne}>
+                  <p>
+                    <strong>Native Name: </strong> {data.nativeName}
+                  </p>
+                  <p>
+                    <strong>Population: </strong>{" "}
+                    {data.population.toLocaleString("en-US")}
+                  </p>
+                  <p>
+                    <strong>Region: </strong> {data.region}
+                  </p>
+                  <p>
+                    <strong>Sub Region: </strong> {data.subregion}
+                  </p>
+                  <p>
+                    <strong>Capital: </strong> {data.capital}
+                  </p>
+                  <p>
+                    <strong>Border Countries: </strong>
+                  </p>
+                </div>
+                <div className={classes.dataTwo}>
+                  <p>
+                    <strong>Top Level Domain: </strong>
+                    {data.topLevelDomain}
+                  </p>
+                  <p>
+                    <strong>Currencies: </strong>
+                    {data.currencies[0].name}
+                  </p>
+                  <p>
+                    <strong>Languages: </strong>
+                    {data.languages[0].name}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
