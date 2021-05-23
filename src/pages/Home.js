@@ -37,7 +37,7 @@ const Home = () => {
                 <Card
                   country={data.name}
                   source={data.flag}
-                  population={data.population.toLocaleString("en-US")}
+                  population={data.population}
                   region={data.region}
                   capital={data.capital}
                 />

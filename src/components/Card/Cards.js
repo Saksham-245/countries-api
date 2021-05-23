@@ -8,7 +8,9 @@ const Card = (props) => {
       <div className="card-body">
         <h4 className="card-title">{props.country}</h4>
         <div className="card-detail">
-          <p className="card-text">Population: {props.population}</p>
+          <p className="card-text">
+            Population: {props.population.toLocaleString("en-US")}
+          </p>
           <p className="card-text">Region: {props.region}</p>
           <p className="card-text">Capital: {props.capital}</p>
         </div>

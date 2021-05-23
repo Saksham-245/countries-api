@@ -1,9 +1,8 @@
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner/Spinner";
 import TopBar from "../components/TopBar/TopBar";
-import "./CountryDetail.css";
+import classes from "./CountryDetail.module.css";
 
 const CountryDetail = ({ match }) => {
   const {
@@ -27,12 +26,35 @@ const CountryDetail = ({ match }) => {
   return (
     <div>
       <TopBar />
-      <div style={{ marginTop: "5%", marginLeft: "5%" }}>
+      <div style={{ marginTop: "10%", marginLeft: "5%", display: "flex" }}>
         {loading ? (
           <Spinner />
         ) : (
-          <div>
-            <img src={data.flag} alt={data.name} />
+          <div style={{ display: "flex" }}>
+            <div>
+              <img src={data.flag} alt={data.name} />
+            </div>
+            <div style={{ marginTop: -45 }}>
+              <h2 className={classes.heading}>{data.name}</h2>
+              <div className={classes.dataOne}>
+                <p>
+                  <strong>Native Name: </strong> {data.nativeName}
+                </p>
+                <p>
+                  <strong>Population: </strong>{" "}
+                  {data.population.toLocaleString("en-US")}
+                </p>
+                <p>
+                  <strong>Region: </strong> {data.region}
+                </p>
+                <p>
+                  <strong>Sub Region: </strong> {data.subregion}
+                </p>
+                <p>
+                  <strong>Capital: </strong> {data.capital}
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </div>
