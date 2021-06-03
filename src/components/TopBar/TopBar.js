@@ -11,9 +11,7 @@ const TopBar = () => {
             <p className="h2 p-2">Where in the World!</p>
           </Link>
           <div className="d-flex">
-//             <button type="button" className="btn me-5">
-//               Dark Mode
-//             </button>
+//             <button type="button" className="btn me-5">Dark Mode</button>
           </div>
         </div>
       </nav>
