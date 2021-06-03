@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <div>
       <TopBar />
-      <Search />
+//       <Search />
       <div
         style={{
           display: "flex",
